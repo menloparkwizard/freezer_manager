@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>Freezer Inventory</h1>
+{% endblock %}
+
+{% block content %}
+<table>
+	<tr>
+		<th>Item</th>
+		<th>Servings</th>
+		<th>Location</th>
+		<th>Actions</th>
+	</tr>
+	{% for f in food %}
+	<tr>
+		<td>{{f.name}}</td>
+		<td>{{f.servings}}</td>
+		<td>{{f.location}}</td>
+		<td>Edit</td>
+	</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}
